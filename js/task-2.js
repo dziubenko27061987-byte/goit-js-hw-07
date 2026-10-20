@@ -29,8 +29,9 @@ const galleryList = document.querySelector(".gallery");
 
 const galleryMarkup = images
   .map(
-    (image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`
+    (image) =>
+      `<li class="gallery-item"><img class="gallery-img" src="${image.url}" alt="${image.alt}"></li>`
   )
-    .join("");
-  
-    galleryList.insertAdjacentHTML("beforeend", galleryMarkup);
+  .join("");
+
+galleryList.insertAdjacentHTML("beforeend", galleryMarkup);
